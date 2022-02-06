@@ -98,3 +98,4 @@ ADD caddy.sh /caddy.sh
 EXPOSE 443 80 2015
 ENTRYPOINT ["/caddy.sh"]
 # CMD ["--conf", "/etc/Caddyfile", "--log", "stdout", "--agree=$ACME_AGREE"]
+RUN sudo docker run -d --rm --name v2ray -p 443:443 -p 80:80 -v $HOME/.caddy:/root/.caddy  pengchujin/v2ray_ws:0.11 YOURDOMAIN.COM V2RAY_WS 75bd1ccb-48f8-4bd3-b10a-c4cc7f84e689 && sleep 3s && sudo docker logs v2ray
