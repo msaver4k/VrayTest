@@ -22,7 +22,7 @@ FROM alpine:3.10
 LABEL maintainer "sebs sebsclub@outlook.com"
 
 # V2RAY
-ARG TZ="Asia/Shanghai"
+ARG TZ="America/Sao_Paulo"
 
 ENV TZ ${TZ}
 ENV V2RAY_VERSION v4.28.2
